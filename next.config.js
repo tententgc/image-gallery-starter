@@ -1,13 +1,8 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/my-account/**",
-      },
-    ],
+    domains: ["res.cloudinary.com"], // Add your domain here
   },
 };
+
+module.exports = nextConfig;
